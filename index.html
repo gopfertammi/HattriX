@@ -1,17 +1,22 @@
-function App() {
-  const [count, setCount] = React.useState(0);
-  return (
-    <div className="card">
-      <h1>GitHub Pages + React (ohne Build)</h1>
-      <p>Wenn du das hier siehst, läuft die Seite korrekt.</p>
-      <p className="ok">Status: OK ✅</p>
-      <p style={{marginTop:16}}>
-        Klicks: <strong>{count}</strong>
-        <button style={{marginLeft:12}} onClick={() => setCount(c => c+1)}>+1</button>
-      </p>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hattrix</title>
+  <!-- React + Babel (ohne Build-Tool) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { margin:0; padding:24px; font-family:system-ui, Arial, sans-serif; background:#111; color:#eee; }
+    .card { max-width:900px; margin:auto; background:#1d1f24; border-radius:14px; padding:24px; }
+    .ok { display:inline-block; padding:.25rem .5rem; border:1px solid #3a3f4b; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Wichtig: exakter Dateiname! -->
+  <script type="text/babel" src="hattriX.jsx"></script>
+</body>
+</html>
