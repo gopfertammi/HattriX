@@ -1,5 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Users, Settings, Home, Shirt, X, Heart, Plus, Trash2, Edit2, Upload, Download } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hattriX Simulation - Hattrick Lineup Simulator by IanMajor</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; font-family: system-ui, sans-serif; background: #1f2937; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script type="text/babel">
+        const { Users, Home, Shirt, X, Heart, Plus, Trash2, Edit2, Upload, Download } = lucide;
+        const { useState, useEffect } = React;
 
 const LineupSimulator = () => {
   const [selectedFormation, setSelectedFormation] = useState('3-5-2');
@@ -2256,3 +2274,8 @@ const LineupSimulator = () => {
 };
 
 export default LineupSimulator;
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<LineupSimulator />);
+    </script>
+</body>
+</html>
